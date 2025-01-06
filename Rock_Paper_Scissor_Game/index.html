@@ -1,18 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>User Choice: <span id="user-choice"></span></h1>
-    <h1>Computer Choice: <span id="computer-choice"></span></h1>
-    <h1>Result: <span id="result"></span></h1>
+    <div class="container">
+        <h1>Rock Paper Scissors</h1>
 
-    <button id="Rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
+        <div class="score-life">
+            <h3>Score: <span id="score">0</span></h3>
+            <h3>Life: <span id="life">5</span></h3>
+        </div>
+
+        <div class="choices">
+            <div>
+                <h2>User Choice:</h2>
+                <span id="user-choice" class="choice"></span>
+            </div>
+            <div>
+                <h2>Computer Choice:</h2>
+                <span id="computer-choice" class="choice"></span>
+            </div>
+        </div>
+
+        <h2>Result:</h2>
+        <span id="result" class="result-text"></span>
+
+        <div class="buttons">
+            <button id="Rock" class="btn">Rock</button>
+            <button id="paper" class="btn">Paper</button>
+            <button id="scissors" class="btn">Scissors</button>
+        </div>
+
+        <div id="game-over" class="game-over" style="display:none;">
+            <h2>Game Over</h2>
+            <p>Your final score is: <span id="final-score"></span></p>
+        </div>
+    </div>
 
     <script src="app.js"></script>
 </body>
