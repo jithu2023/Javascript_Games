@@ -1,51 +1,64 @@
 let score = 0;
-let life = 5;
+let lives = 5;
+
+const scoreElement = document.getElementById('score');
+const livesElement = document.getElementById('lives');
+const resultElement = document.getElementById('result');
+const gameOverElement = document.getElementById('game-over');
+const finalScoreElement = document.getElementById('final-score');
+const playAgainButton = document.getElementById('play-again');
 
 function playGame(playerChoice) {
+    if (lives <= 0) return; // If lives are over, do nothing
+
     const userChoiceElement = document.getElementById('user-choice');
     const computerChoiceElement = document.getElementById('computer-choice');
-    const resultElement = document.getElementById('result');
-    const scoreElement = document.getElementById('score');
-    const lifeElement = document.getElementById('life');
-    const gameOverElement = document.getElementById('game-over');
-    const finalScoreElement = document.getElementById('final-score');
 
     const choices = ['rock', 'paper', 'scissors'];
     const computerChoice = choices[Math.floor(Math.random() * choices.length)];
-    console.log(computerChoice);
 
     userChoiceElement.textContent = playerChoice;
     computerChoiceElement.textContent = computerChoice;
 
+    let resultMessage = '';
+    
     if (playerChoice === computerChoice) {
-        resultElement.textContent = `It's a tie! Both chose ${playerChoice}.`;
+        resultMessage = `It's a tie! Both chose ${playerChoice}.`;
     } else if (
         (playerChoice === 'rock' && computerChoice === 'scissors') ||
         (playerChoice === 'paper' && computerChoice === 'rock') ||
         (playerChoice === 'scissors' && computerChoice === 'paper')
     ) {
-        resultElement.textContent = `You win! ${playerChoice} beats ${computerChoice}.`;
         score++;
+        resultMessage = `You win! ${playerChoice} beats ${computerChoice}.`;
     } else {
-        resultElement.textContent = `You lose! ${computerChoice} beats ${playerChoice}.`;
-        life--;
+        lives--;
+        resultMessage = `You lose! ${computerChoice} beats ${playerChoice}.`;
     }
 
+    // Update score and lives
     scoreElement.textContent = score;
-    lifeElement.textContent = life;
+    livesElement.textContent = lives;
+    resultElement.textContent = resultMessage;
 
-    if (life <= 0) {
+    // Check if game is over
+    if (lives <= 0) {
         gameOverElement.style.display = 'block';
         finalScoreElement.textContent = score;
-        disableButtons();
     }
-}
-
-function disableButtons() {
-    const buttons = document.querySelectorAll('.btn');
-    buttons.forEach(button => button.disabled = true);
 }
 
 document.getElementById('Rock').addEventListener('click', () => playGame('rock'));
 document.getElementById('paper').addEventListener('click', () => playGame('paper'));
 document.getElementById('scissors').addEventListener('click', () => playGame('scissors'));
+
+playAgainButton.addEventListener('click', () => {
+    score = 0;
+    lives = 5;
+    scoreElement.textContent = score;
+    livesElement.textContent = lives;
+    resultElement.textContent = '';
+    gameOverElement.style.display = 'none';
+    document.getElementById('user-choice').textContent = '';
+    document.getElementById('computer-choice').textContent = '';
+});

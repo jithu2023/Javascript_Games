@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
@@ -11,10 +9,10 @@
 <body>
     <div class="container">
         <h1>Rock Paper Scissors</h1>
-
+        
         <div class="score-life">
-            <h3>Score: <span id="score">0</span></h3>
-            <h3>Life: <span id="life">5</span></h3>
+            <p>Score: <span id="score">0</span></p>
+            <p>Lives: <span id="lives">5</span></p>
         </div>
 
         <div class="choices">
@@ -27,7 +25,7 @@
                 <span id="computer-choice" class="choice"></span>
             </div>
         </div>
-
+        
         <h2>Result:</h2>
         <span id="result" class="result-text"></span>
 
@@ -36,10 +34,11 @@
             <button id="paper" class="btn">Paper</button>
             <button id="scissors" class="btn">Scissors</button>
         </div>
-
-        <div id="game-over" class="game-over" style="display:none;">
-            <h2>Game Over</h2>
-            <p>Your final score is: <span id="final-score"></span></p>
+        
+        <div id="game-over" class="game-over">
+            <h2>Game Over!</h2>
+            <p>Your final score: <span id="final-score"></span></p>
+            <button id="play-again" class="btn">Play Again</button>
         </div>
     </div>
 
