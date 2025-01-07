@@ -2,7 +2,7 @@ let score = 0;
 let lives = 5;
 
 const scoreElement = document.getElementById('score');
-const livesElement = document.getElementById('lives');
+const livesElement = document.getElementById('life');
 const resultElement = document.getElementById('result');
 const gameOverElement = document.getElementById('game-over');
 const finalScoreElement = document.getElementById('final-score');
@@ -53,12 +53,19 @@ document.getElementById('paper').addEventListener('click', () => playGame('paper
 document.getElementById('scissors').addEventListener('click', () => playGame('scissors'));
 
 playAgainButton.addEventListener('click', () => {
+    // Reset score and lives to original values
     score = 0;
     lives = 5;
+
+    // Update the displayed values
     scoreElement.textContent = score;
     livesElement.textContent = lives;
     resultElement.textContent = '';
+
+    // Hide the game-over screen
     gameOverElement.style.display = 'none';
+
+    // Clear user and computer choices
     document.getElementById('user-choice').textContent = '';
     document.getElementById('computer-choice').textContent = '';
 });

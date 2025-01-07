@@ -1,0 +1,106 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2f2f2f; /* Dark background */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 10px;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 400px; /* Reduced container size */
+    background: #1a1a1a; /* Dark container background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 2.5rem; /* Reduced font size */
+    font-family: 'Poppins', sans-serif;
+    color: #76c7c0; /* Soft green for the title */
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1rem; /* Smaller font size for better readability */
+    margin: 8px 0;
+    color: #b3b3b3; /* Light grey for the score/life */
+}
+
+.choices {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.choices div {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.choice {
+    font-size: 3rem; /* Increased font size for choice text */
+    font-weight: bold;
+    color: #76c7c0; /* Soft green for choices */
+}
+
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    background-color: #2e8b57; /* Green button */
+    color: white;
+    padding: 12px 25px; /* Adjusted padding for better button size */
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem; /* Slightly larger font size for buttons */
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #006400; /* Dark green on hover */
+}
+
+.game-over {
+    display: none;
+    margin-top: 20px;
+}
+
+.game-over.active {
+    display: block;
+}
+
+#game-over h2 {
+    font-size: 1.5rem;
+    color: #f44336; /* Red color for "Game Over" */
+}
+
+#final-score {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #76c7c0; /* Soft green for final score */
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px; /* Increased space between grid items */
+    margin: 20px 0;
+}
+
+.grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+}
