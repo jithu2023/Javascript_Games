@@ -1,0 +1,96 @@
+/* Import the Poppins font */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4e1c1; /* Light golden background */
+    padding: 20px;
+  }
+  
+  /* Sidebar containing score, lives, and time */
+  .sidebar {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    text-align: left;
+    font-size: 16px;
+    color: #5d4037; /* Dark brown color for text */
+  }
+  
+  h2 {
+    margin: 8px 0;
+    font-weight: 600;
+  }
+  
+  h2#score, h2#lives, h2#time-left {
+    font-size: 20px;
+    color: #5d4037; /* Dark brown color for text */
+  }
+  
+  /* Game container with the grid */
+  .game-container {
+    text-align: center;
+    background-color: #ffffff; /* White background for the game */
+    padding: 60px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border: solid 2px #c39c6c; /* Light brown border */
+    width: 340px;
+    margin-top: 30px;
+  }
+  
+  .grid {
+    width: 340px;
+    height: 340px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    gap: 3px; /* Space between squares */
+  }
+  
+  .square {
+    height: 100px;
+    width: 100px;
+    border: solid 2px #e0c097; /* Light golden brown border */
+    background-color: #d8a759; /* Golden-brown background for squares */
+    position: relative;
+    border-radius: 5px;
+  }
+  
+  .mole {
+    background-image: url("mole.jpg");
+    background-size: cover;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #f4a261; /* Golden-brown button */
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  button:hover {
+    background-color: #e76f51; /* Darker golden-brown when hovered */
+  }
+  
+  .play-again-btn {
+    background-color: #2a2a2a; /* Dark brown for the Play Again button */
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
