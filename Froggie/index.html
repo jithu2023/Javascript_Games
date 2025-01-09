@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frogger Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>🐸 Frogger Game 🐸</h1>
+        <div class="status-bar">
+            <div class="status-item">
+                <span>⏳ Time Left:</span> <span id="time-left">60</span>
+            </div>
+            <div class="status-item">
+                <span>🏆 Result:</span> <span id="result">---</span>
+            </div>
+            
+        </div>
+        <button id="start-pause-button">🎮 Start/Pause</button>
+        <button id="play-again-button" style="display: none;">🔄 Play Again</button>
+    </header>
+    <main>
+        <div class="grid-container">
+            <div class="grid"></div>
+        </div>
+    </main>
+    <footer>
+        <p>➡️ Use the arrow keys to move the 🐸 frog to the 🏁 goal while avoiding 🚗 obstacles!</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
