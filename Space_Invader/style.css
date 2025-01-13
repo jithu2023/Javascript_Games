@@ -1,0 +1,132 @@
+body {
+    font-family: 'Poppins', sans-serif; /* Apply Poppins font here */
+    background: radial-gradient(circle at top, #f7f8fc, #e6e9f2);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #333;
+    overflow: hidden;
+}
+
+/* Game Container Styling */
+.game-container {
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 25px;
+    border: 1px solid #d1d9e6;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Game Title */
+.game-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+}
+
+/* Game Description */
+.game-description {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    max-width: 90%;
+}
+
+/* Score Display */
+h1.results {
+    font-size: 1.8rem;
+    color: #3498db; 
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin: 15px 0;
+}
+
+/* Grid Styling */
+.grid {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #d1d9e6;
+    background: #f8f9fa;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Grid Cells */
+.grid div {
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Invader Styling */
+.invader {
+    background-color: #5dade2;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(93, 173, 226, 0.6);
+    animation: float 2s infinite ease-in-out;
+}
+
+/* Shooter Styling */
+.shooter {
+    background-color: #52be80;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(82, 190, 128, 0.6);
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Laser Styling */
+.laser {
+    background-color: #f4d03f;
+}
+
+/* Explosion Effect */
+.boom {
+    background: radial-gradient(circle, #e74c3c, #c0392b);
+    animation: explode 0.5s ease-out forwards;
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px rgba(82, 190, 128, 0.6);
+    }
+    to {
+        box-shadow: 0 0 10px rgba(82, 190, 128, 0.8);
+    }
+}
+
+@keyframes explode {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(2);
+        opacity: 0;
+    }
+}

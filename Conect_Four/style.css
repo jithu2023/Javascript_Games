@@ -1,0 +1,93 @@
+body {
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font here */
+  background: radial-gradient(circle, #4a4adf, #14141a);
+  color: #e0e0e0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.title {
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font here */
+
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title h1 {
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font here */
+
+  font-size: 3rem;
+  color: #ffffff;
+  text-shadow: 1px 2px 4px rgba(255, 255, 255, 0.5);
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.title .highlight {
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font here */
+
+  color: #eeff06; /* Tomato red for emphasis */
+  text-shadow: 1px 2px 6px rgba(102, 101, 66, 0.7);
+}
+
+h3 {
+  font-size: 1.6rem;
+  color: #dcdcdc;
+  margin: 10px 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+#current-player {
+  color: #ff6347; /* Tomato red for the current player indicator */
+  font-weight: bold;
+  text-shadow: 1px 2px 4px rgba(255, 99, 71, 0.6);
+}
+
+#result {
+  font-family: 'Poppins', sans-serif; /* Apply Poppins font here */
+
+  color: #3cb371; /* Medium sea green */
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 15px;
+  text-shadow: 1px 2px 4px rgba(60, 179, 113, 0.5);
+}
+
+.grid {
+  border: 1px solid;
+  width: 320px;
+  height: 275px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+  border-radius: 10px;
+  border: 2px solid #64646a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.grid div {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.player-one {
+  background: radial-gradient(circle, #8a2be2, #6a0dad); /* Purple shades */
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(138, 43, 226, 0.7);
+}
+
+.player-two {
+  background: radial-gradient(circle, #2e8b57, #228b22); /* Green shades */
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(46, 139, 87, 0.7);
+}
